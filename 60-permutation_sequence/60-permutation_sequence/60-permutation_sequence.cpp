@@ -31,8 +31,6 @@ public:
          * 在digtals.size()个数的排列中寻找第k大的排列 */
         /* 后面将确定digitals里数字的位置 */
         while (!digitals.empty()) {
-            /* f表示：剩下的数字有多少种排列 */
-            /* p表示：剩下数字的排列中，第k大的那个排列的最高位在digital中的位置 */
             int fac = factorials[digitals.size() - 1];
             int mod = k % fac;
             int pos = k / fac + (mod ? 1 : 0);
@@ -78,7 +76,7 @@ private:
 int main()
 {
     Solution s;
-    string i = s.getPermutation(5, 37);
+    string i = s.getPermutation(6, 16);
     return 0;
 }
 
